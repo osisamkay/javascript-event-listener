@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ANIMAL CITY</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <h1>NATURE UNTAMED</h1>
+    </header>
+
+    <!-- animal section -->
+    <section>
+        <div class="animal animal1">
+            <img src="image/elephant-1822636_640.jpg" alt="elephants">
+            <h4 id='elephant'></h4>
+        </div>
+        <div class="animal animal2">
+            <img src="image/discus-fish-1943755_640.jpg" alt="discuss fish">
+            <h4 id='fish'></h4>
+        </div>
+        <div class="animal animal3">
+            <img src="image/bird-3732867_640.jpg" alt="owl">
+            <h4 id='owl'></h4>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>
+            &copy; <span id='date'></span> Olukayode Osisami.
+        </p>
+    </footer>
+
+    <script>
+        //footer Year
+        document.getElementById('date').textContent = (new Date()).getFullYear();
+        //ends
+
+        //variables for listeners
+        var Elephant = document.querySelector('.animal1');
+        var Fish = document.querySelector('.animal2');
+        var Owl = document.querySelector('.animal3');
+        //variables for listeners ends
+
+        // event listeners 1
+        Elephant.addEventListener('click', function() {
+            var showDetails = document.getElementById('elephant');
+            showDetails.textContent = 'Hey! You clicked an ELEPHANT';
+        });
+        Elephant.addEventListener('mouseout', function() {
+            var showDetails = document.getElementById('elephant');
+            showDetails.textContent = '';
+        });
+        // event listeners 1 ends
+
+        // event listeners 2
+        var showDetails = document.getElementById('fish');
+        Fish.addEventListener('click', function() {
+            showDetails.textContent = 'soFISHticated FISH'
+        });
+        Fish.addEventListener('mouseout', function() {
+            showDetails.textContent = '';
+        });
+        // event listeners 2 ends
+
+        // event listeners 3
+        Owl.addEventListener('click', function() {
+            var showDetails = document.getElementById('owl');
+            showDetails.textContent = 'Hoot! Hoot!! its an OWL ';
+        });
+        Owl.addEventListener('mouseout', function() {
+            var showDetails = document.getElementById('owl');
+            showDetails.textContent = '';
+        });
+        // event listeners 3 ends
+    </script>
+</body>
+
+</html>
